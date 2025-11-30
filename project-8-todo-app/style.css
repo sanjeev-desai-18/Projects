@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --PRIMARY: #7749f8;
+  --PRIMARY-LIGHT: #9775fa;
+  --DARK: #212529;
+  --LIGHT: #f8f9fa;
+  --GRAY: #868e96;
+  --DANGER: #fa5252;
+  --SUCESS: #40c057;
+  --BORDER: #e9ecef;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f1f3f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--DARK);
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background-color: var(--PRIMARY);
+  color: #fff;
+  padding: 20px 25px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.todo-input {
+  padding: 20px 25px;
+  display: flex;
+  gap: 10px;
+  background-color: var(--LIGHT);
+  border-bottom: 1px solid var(--BORDER);
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #dee2e6;
+  font-size: 1rem;
+  transition: all 0.2 ease-in-out;
+  border-radius: 5px;
+}
+
+.todo-input input:focus {
+  outline: none;
+  border-color: var(--PRIMARY);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.01);
+}
+
+.todo-input button {
+  background-color: var(--PRIMARY);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.todo-input button:hover {
+  background-color: var(--PRIMARY-LIGHT);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+  padding: 15px 25px;
+}
+
+.filter {
+  padding: 5px 3px;
+  cursor: pointer;
+  color: var(--GRAY);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.filter:hover {
+  color: var(--PRIMARY);
+}
+
+.filter.active {
+  color: var(--PRIMARY);
+  border-bottom: 2px solid var(--PRIMARY);
+  font-weight: 500;
+}
+
+.todo-container {
+  padding: 15px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#todos-list {
+  list-style-type: none;
+}
+
+.todo-item {
+  display: flex;
+  padding: 12px 15px;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-item:hover {
+  background-color: var(--LIGHT);
+}
+
+.checkbox-container {
+  margin-right: 15px;
+}
+
+.todo-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todo-checkbox:checked + .checkmark {
+  background-color: var(--SUCESS);
+  border-color: var(--SUCESS);
+}
+
+.todo-checkbox:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todo-item-text {
+  flex: 1;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.todo-item.completed .todo-item-text {
+  text-decoration: line-through;
+  color: var(--GRAY);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--GRAY);
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  color: var(--DANGER);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  color: var(--GRAY);
+}
+
+.empty-state i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-top: 1px solid var(--border);
+  background-color: var(--LIGHT);
+  font-size: 14px;
+}
+
+#items-left {
+  color: var(--GRAY);
+}
+
+#clear-completed {
+  background: none;
+  border: none;
+  color: var(--GRAY);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#clear-completed:hover {
+  color: var(--DANGER);
+}
