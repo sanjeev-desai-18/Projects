@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Backgrounds */
+  --page-bg: #f2f0ff;
+  --card-bg: #0f172a; /* dark overlay */
+  --card-shadow: rgba(0, 0, 0, 0.25);
+
+  /* Overlay */
+  --overlay-dark: rgba(0, 0, 0, 0.75);
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+
+  /* Controls */
+  --control-bg: rgba(255, 255, 255, 0.15);
+  --control-border: rgba(255, 255, 255, 0.3);
+
+  /* Accent (Play button) */
+  --accent-orange: #ff6a2a;
+  --accent-orange-hover: #ff7f45;
+
+  /* Icons */
+  --icon-color: #ffffff;
+  --icon-muted: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--overlay-dark);
+  font-family: sans-serif;
+}
+
+main {
+  background: linear-gradient(var(--overlay-dark)),
+    url("beautiful-tropical-beach-sea.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.4);
+}
+
+.timer-container {
+  font-size: 4rem;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+}
+
+.control-btn-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.control-btn-container button {
+  border: none;
+  padding: 1.3rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-primary);
+  background-color: transparent;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.control-btn-container button:nth-child(2) {
+  transform: scale(1.3);
+  background-color: var(--accent-orange);
+  border: none;
+}
+
+.control-btn-container button:nth-child(2):hover {
+  opacity: 0.7;
+}

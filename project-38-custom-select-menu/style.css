@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background Gradient */
+  --bg-red-light: #ff5a3a;
+  --bg-red-dark: #9b1d2d;
+
+  /* Card / Dropdown */
+  --card-glass-bg: rgba(255, 255, 255, 0.55);
+  --card-glass-border: rgba(255, 255, 255, 0.35);
+  --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  --card-radius: 12px;
+
+  /* Text */
+  --text-primary: #2a2a2a;
+  --text-muted: #6b6b6b;
+
+  /* Icons (Brand Colors) */
+  --facebook: #1877f2;
+  --youtube: #ff0000;
+  --instagram: #e4405f;
+  --twitter: #1da1f2;
+  --pinterest: #bd081c;
+  --whatsapp: #25d366;
+
+  /* Hover */
+  --item-hover-bg: rgba(255, 255, 255, 0.25);
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-red-light),
+    var(--bg-red-dark)
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+main {
+  width: 500px;
+  text-align: center;
+}
+
+select {
+  padding: 10px;
+  width: 300px;
+  font-size: 1rem;
+  background-color: var(--card-glass-bg);
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+}
+
+select:focus {
+  border: none;
+  outline: none;
+}

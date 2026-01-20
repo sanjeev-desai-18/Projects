@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background Gradient */
+  --bg-start: #0b0b5f; /* Deep blue */
+  --bg-end: #4b1b6a; /* Purple */
+
+  /* Container / Card */
+  --card-bg: #3f458a; /* Textarea background */
+  --card-bg-soft: #4a4f9d; /* Dropdown background */
+  --card-border: rgba(255, 255, 255, 0.1);
+
+  /* Text Colors */
+  --text-primary: #ffffff; /* Main heading text */
+  --text-secondary: #d6d6f2; /* Placeholder / secondary text */
+  --text-muted: #b3b3d9;
+
+  /* Accent / Highlight */
+  --accent-pink: #ff4d6d; /* "Converter" text & button */
+  --accent-pink-hover: #ff3357;
+  --accent-underline: #ffffff;
+
+  /* Buttons */
+  --btn-bg: #ff4d6d;
+  --btn-bg-hover: #ff3357;
+  --btn-text: #ffffff;
+
+  /* Inputs */
+  --input-bg: #3f458a;
+  --input-text: #ffffff;
+  --input-placeholder: #cfd2ff;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, var(--bg-start), var(--bg-end));
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  color: var(--text-primary);
+}
+
+main {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+header {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h1 span {
+  color: var(--accent-pink);
+  position: relative;
+}
+
+h1 span::after {
+  content: "";
+  height: 4px;
+  background-color: var(--text-primary);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#text {
+  width: 100%;
+  min-height: 300px;
+  padding: 13px;
+  background-color: var(--card-bg);
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  overflow: hidden;
+  resize: none;
+  border-radius: 10px;
+  font: inherit;
+}
+
+#text:focus {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  border: none;
+  outline: none;
+}
+
+#text::placeholder {
+  color: var(--text-primary);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#language {
+  flex: 1;
+  background-color: var(--card-bg);
+  background: var(--card-bg-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white'%3E%3Cpath d='M5 7l5 6 5-6'/%3E%3C/svg%3E")
+    no-repeat right 20px center;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  color: var(--text-primary);
+  appearance: none;
+  font-size: 1rem;
+}
+
+#language:focus {
+  border: none;
+  outline: none;
+}
+
+#listen-btn {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 25px;
+  width: 120px;
+  background-color: var(--accent-pink);
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+#listen-btn:hover {
+  background-color: var(--accent-pink-hover);
+}

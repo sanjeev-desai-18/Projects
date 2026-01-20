@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <button id="back">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button id="menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+      <div class="info-container">
+        <figure>
+          <!-- song thumbnail here -->
+          <img
+            src="8942292.jpg"
+            alt=""
+            width="150px"
+            height="150px"
+            id="song-thumbnail"
+          />
+        </figure>
+        <p id="song-name">Decpacito</p>
+        <p id="singer-name">Louis Foncee Ft. Puetro Rican</p>
+      </div>
+      <audio src="honey-kisses-413841.mp3" id="song"></audio>
+      <div class="length-container">
+        <input type="range" name="" id="song-range" value="0" />
+      </div>
+      <div class="song-control-container">
+        <button id="previous-btn"><i class="fa-solid fa-backward"></i></button>
+        <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+        <button id="next-btn"><i class="fa-solid fa-forward"></i></button>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

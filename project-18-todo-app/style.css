@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background gradient */
+  --bg-gradient-start: #233a86; /* deep blue */
+  --bg-gradient-end: #5b2c83; /* purple */
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.12);
+
+  /* Text */
+  --text-primary: #1f2937; /* dark gray */
+  --text-secondary: #6b7280; /* muted gray */
+  --text-placeholder: #9ca3af;
+
+  /* Input */
+  --input-bg: #eef0f2;
+  --input-border: #e5e7eb;
+
+  /* Button (Add) */
+  --btn-primary: #ff6b3d; /* orange */
+  --btn-primary-hover: #ff5722;
+  --btn-text: #ffffff;
+
+  /* Task states */
+  --task-complete: #ff6b3d;
+  --task-incomplete: #d1d5db;
+  --task-delete: #9ca3af;
+
+  /* Accent */
+  --accent: #ff6b3d;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+main {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  padding-inline: 1.2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  color: var(--bg-gradient-start);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  border: none;
+  gap: 20px;
+  padding-left: 1rem;
+  /* padding: 1rem; */
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+}
+
+input[type="text"] {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: none;
+}
+
+#add-btn {
+  background-color: var(--btn-primary);
+  border: none;
+  border-radius: 25px;
+  width: 100px;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--btn-text);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: var(--btn-primary-hover);
+}
+
+.todo-container {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  font-size: 1rem;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.icon-text {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 15px;
+}
+
+#checkmark-btn {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--task-incomplete);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#checkmark-btn:hover {
+  border-color: var(--accent);
+}
+
+#checkmark-btn i {
+  color: var(--btn-text);
+  display: none;
+}
+
+#delete-btn {
+  width: 25px;
+  height: 25px;
+  font-size: 0.95rem;
+  border: none;
+  background-color: transparent;
+  color: var(--task-delete);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#delete-btn:hover {
+  background-color: var(--input-bg);
+}
+
+.completed {
+  color: var(--text-secondary);
+}
+
+.completed #todo-text {
+  text-decoration: line-through;
+}
+
+.completed #checkmark-btn {
+  background-color: var(--task-complete);
+}
+
+.completed #checkmark-btn i {
+  display: inline;
+}

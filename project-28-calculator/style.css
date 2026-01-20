@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Backgrounds */
+  --bg-page: #e6f6fb; /* Light blue outer background */
+  --bg-calculator: #3b4453; /* Main calculator body */
+  --bg-key: #404a59; /* Normal button */
+  --bg-key-pressed: #343c49; /* Active/pressed button */
+
+  /* Neumorphism shadows */
+  --shadow-dark: #2f3642;
+  --shadow-light: #4a5568;
+
+  /* Text colors */
+  --text-primary: #ffffff; /* Numbers */
+  --text-secondary: #cfd8dc; /* Labels */
+  --text-muted: #9aa4b2;
+
+  /* Accent colors */
+  --accent-cyan: #4dd0e1; /* AC, DE, operators */
+  --accent-green: #3ddc97; /* = button */
+  --accent-red: #ff6b6b; /* Optional error/clear */
+
+  /* Borders & radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: var(--text-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 430px;
+  background-color: var(--bg-calculator);
+  padding: 30px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  font-size: 4rem;
+  padding: 10px 0 10px;
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+  caret-color: transparent;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: none;
+}
+
+.calc-btn-container {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: repeat(5, 75px);
+  gap: 20px;
+}
+
+.calc-btn-container button {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--bg-key);
+  box-shadow: -3px -3px 8px 2px var(--shadow-light),
+    3px 3px 8px 2px var(--shadow-dark);
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: transform 0.3s ease;
+}
+
+.calc-btn-container button:last-child {
+  grid-column: span 2;
+}
+
+.calc-btn-container button:hover {
+  transform: translateY(-3px);
+}
+
+button.symbol {
+  color: var(--accent-cyan);
+}

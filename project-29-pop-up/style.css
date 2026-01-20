@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background */
+  --bg-primary: #78a2dc; /* Dark blue background */
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  /* Success / Accent */
+  --success-green: #6cc04a;
+  --success-green-dark: #5ab03e;
+  --success-green-light: #8bd36a;
+
+  /* Text */
+  --text-primary: #2e2e2e;
+  --text-secondary: #6b6b6b;
+  --text-white: #ffffff;
+
+  /* Button */
+  --btn-bg: var(--success-green);
+  --btn-bg-hover: var(--success-green-dark);
+  --btn-text: #ffffff;
+
+  /* Border & Radius */
+  --border-radius-lg: 12px;
+  --border-radius-sm: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  text-align: center;
+}
+
+#submit-btn {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease;
+  caret-color: transparent;
+}
+
+#submit-btn:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.pop-up-container {
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  animation: slideDown 0.9s ease forwards;
+}
+
+.pop-up-container i {
+  font-size: 4rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 70px;
+  background-color: var(--card-bg);
+  color: var(--success-green-light);
+  position: absolute;
+  top: -30px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.pop-up-container h2 {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.pop-up-container p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+#ok-btn {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--success-green-light);
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text-white);
+  transition: background-color 0.3s ease;
+}
+
+#ok-btn:hover {
+  background-color: var(--success-green-dark);
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-1000px) scale(0.01);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1.1);
+  }
+}

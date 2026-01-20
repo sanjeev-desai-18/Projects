@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #0b0624; /* Deep dark purple */
+  --bg-secondary: #140b3d; /* Slightly lighter purple */
+
+  /* Cards / List Items */
+  --card-pink: #ff3b6f; /* Neon pink */
+  --card-pink-hover: #ff527f;
+
+  /* Borders */
+  --border-dashed: rgba(255, 255, 255, 0.6);
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.75);
+
+  /* Icons */
+  --icon-light: rgba(255, 255, 255, 0.9);
+
+  /* Shadows */
+  --shadow-soft: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  /* background-color: var(--card-pink); */
+  padding: 10px 20px;
+  width: 80%;
+
+  height: 600px;
+  display: flex;
+  gap: 30px;
+}
+
+.container {
+  border: 2px dashed var(--border-dashed);
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.4rem;
+}
+
+.item {
+  background-color: var(--card-pink);
+  padding: 20px;
+  cursor: grab;
+}
+
+.item:hover {
+  background-color: var(--card-pink-hover);
+}
+
+.item:active {
+  cursor: grabbing;
+}

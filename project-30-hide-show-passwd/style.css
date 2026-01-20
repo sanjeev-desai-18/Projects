@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background */
+  --bg-primary: #2b0a5b; /* Deep purple background */
+  --bg-gradient: linear-gradient(135deg, #2b0a5b, #3a0f73);
+
+  /* Input Field */
+  --input-bg: #ffffff;
+  --input-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  --input-border-radius: 12px;
+
+  /* Text & Placeholder */
+  --text-primary: #1f1f1f;
+  --text-muted: #8a8a8a;
+
+  /* Icon */
+  --icon-color: #6b6b6b;
+  --icon-hover: #2b0a5b;
+
+  /* Caret */
+  --caret-color: #2b0a5b;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+main {
+  width: 400px;
+  background-color: var(--input-bg);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+main i {
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+input[type="password"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: none;
+  flex: 1;
+}
+
+input[type="password"]:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: none;
+  flex: 1;
+}
+
+input[type="text"]:focus {
+  border: none;
+  outline: none;
+}

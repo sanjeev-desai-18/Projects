@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="timer-container">
+        <p>
+          <span id="hour">00</span> : <span id="minute">00</span> :
+          <span id="second">00</span>
+        </p>
+      </div>
+      <div class="control-btn-container">
+        <button id="pause-btn">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+        <button id="start-btn">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="reset-btn">
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

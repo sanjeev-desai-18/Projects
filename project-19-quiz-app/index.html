@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Simple Quiz</h1>
+      </header>
+
+      <div class="quiz-container">
+        <p id="question"><span id="question-no">1. </span>Capital of India?</p>
+        <div class="answer-container">
+          <ul id="answer-list">
+            <!-- <li class="answer">Delhi</li>
+            <li class="answer">Mumbai</li>
+            <li class="answer">Kolkata</li>
+            <li class="answer">Banglore</li> -->
+          </ul>
+        </div>
+      </div>
+
+      <button id="next-btn" class="hidden">Next</button>
+
+      <div class="result-container hidden">
+        <p>
+          You scored <span id="user-score">4</span> out of
+          <span id="total-score">4</span>
+        </p>
+        <button id="play-btn">Play Again</button>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

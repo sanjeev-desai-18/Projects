@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Page Background */
+  --bg-page: #d8ecff;
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --card-radius: 16px;
+
+  /* Primary Accent (Button & Selection) */
+  --primary-blue: #4f46e5;
+  --primary-blue-hover: #4338ca;
+
+  /* Discount */
+  --discount-green: #22c55e;
+
+  /* Text */
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+
+  /* Sizes */
+  --size-active: #4f46e5;
+  --size-inactive: #9ca3af;
+
+  /* Color Dots */
+  --color-red: #ef4444;
+  --color-green: #22c55e;
+  --color-blue: #2563eb;
+  --color-pink: #fca5a5;
+
+  /* Quantity */
+  --qty-bg: #f3f4f6;
+  --qty-text: #374151;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-page);
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.image-container {
+  width: 350px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--text-primary);
+  padding: 10px;
+}
+
+.image-container figure img {
+  width: 400px;
+  object-position: -20px;
+}
+
+.details-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.details-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+#price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--qty-text);
+  margin-bottom: 5px;
+}
+
+#discount-value {
+  color: var(--discount-green);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#description {
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.option {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.option label {
+  font-weight: 600;
+  display: flex;
+  cursor: pointer;
+  color: var(--size-inactive);
+}
+
+.option label input {
+  display: none;
+}
+
+.option label input:checked + span {
+  color: var(--size-active);
+}
+
+.option .color span {
+  width: 20px;
+  height: 20px;
+  background-color: #1f2937;
+  border-radius: 50%;
+}
+
+#color-1 {
+  background-color: var(--color-red);
+}
+
+#color-2 {
+  background-color: var(--color-green);
+}
+
+#color-3 {
+  background-color: var(--color-blue);
+}
+
+#color-4 {
+  background-color: var(--color-pink);
+}
+
+.labels label {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.option .color input:checked + span {
+  transform: scale(0.9);
+  box-shadow:
+    0 0 1px 2px rgb(0 0 0),
+    inset 0 0 1px 2px rgba(255, 255, 255);
+}
+.buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.buttons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--size-inactive);
+}
+
+.buttons button:hover {
+  color: var(--primary-blue-hover);
+}
+
+input[type="number"] {
+  border: none;
+  width: 50px;
+  background-color: #eee;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  padding: 3px;
+}
+
+input[type="number"]:focus {
+  border: none;
+  outline: none;
+}
+
+#buy-btn {
+  margin-top: 60px;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+#buy-btn:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.button-container button {
+  background-color: var(--primary-blue);
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: var(--primary-blue-hover);
+}
